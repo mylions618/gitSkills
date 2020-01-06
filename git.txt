@@ -1,0 +1,53 @@
+webpack是处理loaders的
+gulp是处理任务的
+
+git的使用
+1，安装
+Git官网直接下载安装程序，（网速慢的同学请移步国内镜像），然后按默认选项安装即可。
+
+安装完成后，还需要最后一步设置，在命令行输入：
+$ git config --global user.name "Your Name"
+$ git config --global user.email "email@example.com"
+
+第二步，通过git init命令把这个目录变成Git可以管理的仓库：
+$ git init
+$ mkdir demo
+$ cd demo
+$ vi readme.txt  按Esc 输入：wq 保存退出
+$ git add readme.txt
+
+$ git reset --hard HEAD^ 回退版本
+$ cat readme.txt  查看修改的内容
+$ git reset --hard 1094a 返回某一个版本
+$ git reflog用来记录你的每一次命令
+$ git log --pretty=oneline
+$ git checkout -- readme.txt 丢弃工作区的修改
+$ git reset HEAD readme.txt 暂存区的修改撤销，重新放回工作区
+$ git rm test.txt 删除文件 然后commit
+$ git reset --hard HEAD^ commit后又想撤回的操作
+
+
+$ git remote add origin git@github.com:mylions618/mygit.git
+$ git push -u origin master 第一次提交需要-u 
+$ git push origin master
+
+因为远程库中已经存在readme文件了，所以需要先pull下来。命令如下： 
+$ git pull origin master
+$ git pull origin master --allow-unrelated-histories
+
+
+首先，我们创建dev分支，然后切换到dev分支：
+$ git checkout -b dev
+$ git branch  查看当前分支
+$ git checkout master 切回分支
+$ git merge dev 合并分支
+$ git branch -d dev 删除分支
+
+$ git switch -c dev 创建并切换到新的dev分支
+$ git switch master
+
+
+
+
+
+
